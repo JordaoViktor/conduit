@@ -1,0 +1,12 @@
+#Start(27648393)
+
+  Warning number 33
+  C:\Users\JordaoViktor\Documents\projects\rescript-conduit\src\components\Button\Button.res:1:1-11
+  
+  1 │ open Render
+  2 │ open CssJs
+  3 │ 
+  
+  unused open Render.
+  
+#Done(27648484)

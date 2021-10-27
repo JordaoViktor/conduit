@@ -1,0 +1,34 @@
+rescript = 1
+g_finger := C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\@rescript\react\lib\ocaml\install.stamp
+g_finger := C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css-emotion\lib\ocaml\install.stamp
+g_finger := C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css\lib\ocaml\install.stamp
+rule astj
+  command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsc.exe"  -bs-v 8.4.2 -bs-jsx 3  -absname -bs-ast -o $out $i
+o src\App.ast : astj ..\..\src\App.res
+rule deps
+  command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsb_helper.exe" -hash 40d0e328ef3cb4ce9f5dcf5bf370401b $in
+  restat = 1
+o src\App.d : deps src\App.ast
+rule mij
+  command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsc.exe" -I "src\components\Button" -I "src\components" -I "src\lib" -I src -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\@rescript\react\lib\ocaml" -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css-emotion\lib\ocaml" -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css\lib\ocaml"   -bs-package-name my-rescript-app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src\App.cmj src\App.cmi ..\..\src\App.bs.js : mij src\App.ast
+o src\index.ast : astj ..\..\src\index.res
+o src\index.d : deps src\index.ast
+o src\index.cmj src\index.cmi ..\..\src\index.bs.js : mij src\index.ast
+o src\lib\Theme.ast : astj ..\..\src\lib\Theme.res
+o src\lib\Theme.d : deps src\lib\Theme.ast
+o src\lib\Theme.cmj src\lib\Theme.cmi ..\..\src\lib\Theme.bs.js : mij src\lib\Theme.ast
+o src\lib\Render.ast : astj ..\..\src\lib\Render.res
+o src\lib\Render.d : deps src\lib\Render.ast
+o src\lib\Render.cmj src\lib\Render.cmi ..\..\src\lib\Render.bs.js : mij src\lib\Render.ast
+o src\lib\Helpers.ast : astj ..\..\src\lib\Helpers.res
+o src\lib\Helpers.d : deps src\lib\Helpers.ast
+o src\lib\Helpers.cmj src\lib\Helpers.cmi ..\..\src\lib\Helpers.bs.js : mij src\lib\Helpers.ast
+o src\lib\GlobalStyles.ast : astj ..\..\src\lib\GlobalStyles.res
+o src\lib\GlobalStyles.d : deps src\lib\GlobalStyles.ast
+o src\lib\GlobalStyles.cmj src\lib\GlobalStyles.cmi ..\..\src\lib\GlobalStyles.bs.js : mij src\lib\GlobalStyles.ast
+o src\components\Button\Button.ast : astj ..\..\src\components\Button\Button.res
+o src\components\Button\Button.d : deps src\components\Button\Button.ast
+o src\components\Button\Button.cmj src\components\Button\Button.cmi ..\..\src\components\Button\Button.bs.js : mij src\components\Button\Button.ast

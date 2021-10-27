@@ -1,0 +1,34 @@
+rescript = 1
+rule cp
+  command = cmd.exe /C copy /Y $i $out >NUL
+rule touch
+ command = cmd.exe /C type nul >>$out & copy $out+,, >NUL
+o App.cmi : cp ..\bs\src\App.cmi
+o App.cmj : cp ..\bs\src\App.cmj
+o App.cmt : cp ..\bs\src\App.cmt
+o App.res : cp ..\..\src\App.res
+o index.cmi : cp ..\bs\src\index.cmi
+o index.cmj : cp ..\bs\src\index.cmj
+o index.cmt : cp ..\bs\src\index.cmt
+o index.res : cp ..\..\src\index.res
+o Theme.cmi : cp ..\bs\src\lib\Theme.cmi
+o Theme.cmj : cp ..\bs\src\lib\Theme.cmj
+o Theme.cmt : cp ..\bs\src\lib\Theme.cmt
+o Theme.res : cp ..\..\src\lib\Theme.res
+o Render.cmi : cp ..\bs\src\lib\Render.cmi
+o Render.cmj : cp ..\bs\src\lib\Render.cmj
+o Render.cmt : cp ..\bs\src\lib\Render.cmt
+o Render.res : cp ..\..\src\lib\Render.res
+o Helpers.cmi : cp ..\bs\src\lib\Helpers.cmi
+o Helpers.cmj : cp ..\bs\src\lib\Helpers.cmj
+o Helpers.cmt : cp ..\bs\src\lib\Helpers.cmt
+o Helpers.res : cp ..\..\src\lib\Helpers.res
+o GlobalStyles.cmi : cp ..\bs\src\lib\GlobalStyles.cmi
+o GlobalStyles.cmj : cp ..\bs\src\lib\GlobalStyles.cmj
+o GlobalStyles.cmt : cp ..\bs\src\lib\GlobalStyles.cmt
+o GlobalStyles.res : cp ..\..\src\lib\GlobalStyles.res
+o Button.cmi : cp ..\bs\src\components\Button\Button.cmi
+o Button.cmj : cp ..\bs\src\components\Button\Button.cmj
+o Button.cmt : cp ..\bs\src\components\Button\Button.cmt
+o Button.res : cp ..\..\src\components\Button\Button.res
+build install.stamp : touch App.cmi App.cmj index.cmi index.cmj Theme.cmi Theme.cmj Render.cmi Render.cmj Helpers.cmi Helpers.cmj GlobalStyles.cmi GlobalStyles.cmj Button.cmi Button.cmj 
