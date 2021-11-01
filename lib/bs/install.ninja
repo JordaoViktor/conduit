@@ -27,6 +27,14 @@ o GlobalStyles.cmi : cp ..\bs\src\lib\GlobalStyles.cmi
 o GlobalStyles.cmj : cp ..\bs\src\lib\GlobalStyles.cmj
 o GlobalStyles.cmt : cp ..\bs\src\lib\GlobalStyles.cmt
 o GlobalStyles.res : cp ..\..\src\lib\GlobalStyles.res
+o Typography.cmi : cp ..\bs\src\components\Typography\Typography.cmi
+o Typography.cmj : cp ..\bs\src\components\Typography\Typography.cmj
+o Typography.cmt : cp ..\bs\src\components\Typography\Typography.cmt
+o Typography.res : cp ..\..\src\components\Typography\Typography.res
+o Typography_Stories.cmi : cp ..\bs\src\components\Typography\Typography_Stories.cmi
+o Typography_Stories.cmj : cp ..\bs\src\components\Typography\Typography_Stories.cmj
+o Typography_Stories.cmt : cp ..\bs\src\components\Typography\Typography_Stories.cmt
+o Typography_Stories.res : cp ..\..\src\components\Typography\Typography_Stories.res
 o Button.cmi : cp ..\bs\src\components\Button\Button.cmi
 o Button.cmj : cp ..\bs\src\components\Button\Button.cmj
 o Button.cmt : cp ..\bs\src\components\Button\Button.cmt
@@ -39,4 +47,4 @@ o Storybook.cmi : cp ..\bs\src\bindings\Storybook.cmi
 o Storybook.cmj : cp ..\bs\src\bindings\Storybook.cmj
 o Storybook.cmt : cp ..\bs\src\bindings\Storybook.cmt
 o Storybook.res : cp ..\..\src\bindings\Storybook.res
-build install.stamp : touch App.cmi App.cmj index.cmi index.cmj Theme.cmi Theme.cmj Render.cmi Render.cmj Helpers.cmi Helpers.cmj GlobalStyles.cmi GlobalStyles.cmj Button.cmi Button.cmj Button_Stories.cmi Button_Stories.cmj Storybook.cmi Storybook.cmj 
+build install.stamp : touch App.cmi App.cmj index.cmi index.cmj Theme.cmi Theme.cmj Render.cmi Render.cmj Helpers.cmi Helpers.cmj GlobalStyles.cmi GlobalStyles.cmj Typography.cmi Typography.cmj Typography_Stories.cmi Typography_Stories.cmj Button.cmi Button.cmj Button_Stories.cmi Button_Stories.cmj Storybook.cmi Storybook.cmj 
