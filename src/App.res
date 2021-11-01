@@ -1,5 +1,6 @@
 GlobalStyles.includeStyles()
 open Render
+
 @react.component
 let make = () => {
   <div>
