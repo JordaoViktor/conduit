@@ -6,11 +6,11 @@ rule astj
   command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsc.exe"  -bs-v 8.4.2 -bs-jsx 3  -absname -bs-ast -o $out $i
 o src\App.ast : astj ..\..\src\App.res
 rule deps
-  command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsb_helper.exe" -hash 40d0e328ef3cb4ce9f5dcf5bf370401b $in
+  command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsb_helper.exe" -hash 863fc9cf06968a53df25299046a4dcac $in
   restat = 1
 o src\App.d : deps src\App.ast
 rule mij
-  command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsc.exe" -I "src\components\Button" -I "src\components" -I "src\lib" -I src -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\@rescript\react\lib\ocaml" -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css-emotion\lib\ocaml" -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css\lib\ocaml"   -bs-package-name my-rescript-app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-platform\win32\bsc.exe" -I "src\bindings" -I "src\components\Button" -I "src\components" -I "src\lib" -I src -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\@rescript\react\lib\ocaml" -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css-emotion\lib\ocaml" -I "C:\Users\JordaoViktor\Documents\projects\rescript-conduit\node_modules\bs-css\lib\ocaml"   -bs-package-name my-rescript-app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src\App.cmj src\App.cmi ..\..\src\App.bs.js : mij src\App.ast
@@ -32,3 +32,9 @@ o src\lib\GlobalStyles.cmj src\lib\GlobalStyles.cmi ..\..\src\lib\GlobalStyles.b
 o src\components\Button\Button.ast : astj ..\..\src\components\Button\Button.res
 o src\components\Button\Button.d : deps src\components\Button\Button.ast
 o src\components\Button\Button.cmj src\components\Button\Button.cmi ..\..\src\components\Button\Button.bs.js : mij src\components\Button\Button.ast
+o src\components\Button\Button_Stories.ast : astj ..\..\src\components\Button\Button_Stories.res
+o src\components\Button\Button_Stories.d : deps src\components\Button\Button_Stories.ast
+o src\components\Button\Button_Stories.cmj src\components\Button\Button_Stories.cmi ..\..\src\components\Button\Button_Stories.bs.js : mij src\components\Button\Button_Stories.ast
+o src\bindings\Storybook.ast : astj ..\..\src\bindings\Storybook.res
+o src\bindings\Storybook.d : deps src\bindings\Storybook.ast
+o src\bindings\Storybook.cmj src\bindings\Storybook.cmi ..\..\src\bindings\Storybook.bs.js : mij src\bindings\Storybook.ast

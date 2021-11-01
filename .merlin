@@ -15,4 +15,6 @@ S src\lib
 B lib\bs\src\lib
 S src\components\Button
 B lib\bs\src\components\Button
+S src\bindings
+B lib\bs\src\bindings
 ####BSB GENERATED: NO EDIT}

@@ -2,6 +2,8 @@ type section
 
 type storybookModule
 
+type chapter = unit => React.element
+
 type decorator = chapter => React.element
 
 @val @module("@storybook/react")

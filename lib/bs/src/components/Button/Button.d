@@ -1,1 +1,1 @@
-src\components\Button\Button.cmj :  src\lib\Render.cmj src\lib\Render.cmi src\lib\Theme.cmj src\lib\Theme.cmi
+src\components\Button\Button.cmj :  src\lib\Theme.cmj src\lib\Theme.cmi

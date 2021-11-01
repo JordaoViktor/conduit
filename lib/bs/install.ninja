@@ -31,4 +31,12 @@ o Button.cmi : cp ..\bs\src\components\Button\Button.cmi
 o Button.cmj : cp ..\bs\src\components\Button\Button.cmj
 o Button.cmt : cp ..\bs\src\components\Button\Button.cmt
 o Button.res : cp ..\..\src\components\Button\Button.res
-build install.stamp : touch App.cmi App.cmj index.cmi index.cmj Theme.cmi Theme.cmj Render.cmi Render.cmj Helpers.cmi Helpers.cmj GlobalStyles.cmi GlobalStyles.cmj Button.cmi Button.cmj 
+o Button_Stories.cmi : cp ..\bs\src\components\Button\Button_Stories.cmi
+o Button_Stories.cmj : cp ..\bs\src\components\Button\Button_Stories.cmj
+o Button_Stories.cmt : cp ..\bs\src\components\Button\Button_Stories.cmt
+o Button_Stories.res : cp ..\..\src\components\Button\Button_Stories.res
+o Storybook.cmi : cp ..\bs\src\bindings\Storybook.cmi
+o Storybook.cmj : cp ..\bs\src\bindings\Storybook.cmj
+o Storybook.cmt : cp ..\bs\src\bindings\Storybook.cmt
+o Storybook.res : cp ..\..\src\bindings\Storybook.res
+build install.stamp : touch App.cmi App.cmj index.cmi index.cmj Theme.cmi Theme.cmj Render.cmi Render.cmj Helpers.cmi Helpers.cmj GlobalStyles.cmi GlobalStyles.cmj Button.cmi Button.cmj Button_Stories.cmi Button_Stories.cmj Storybook.cmi Storybook.cmj 
